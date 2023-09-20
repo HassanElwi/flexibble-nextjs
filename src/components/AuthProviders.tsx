@@ -18,8 +18,6 @@ type Providers = Record<string, Provider>;
 export default function AuthProviders() {
   // Dictionary of providers
   const [providers, setProviders] = useState<Providers | null>(null);
-  // #TODO remove console
-  console.log(providers);
 
   useEffect(() => {
     const fetchProviders = async () => {
