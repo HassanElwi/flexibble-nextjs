@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commit": "cz"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -27,6 +28,13 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@grafbase/sdk": "^0.6.1"
+    "@grafbase/sdk": "^0.6.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
