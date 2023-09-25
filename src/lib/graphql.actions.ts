@@ -10,20 +10,16 @@ const apiUrl = isProduction
 // Create grafbase api key
 const apiKey = isProduction ? process.env.GRAFBASE_API_KEY || "" : "letmein";
 // Create server url
-const serverUrl = isProduction
-  ? process.env.SERVER_URL || ""
-  : "http://localhost:3000";
+// const serverUrl = isProduction
+//   ? process.env.SERVER_URL || ""
+//   : "http://localhost:3000";
 
 // Create client
 const client = new GraphQLClient(apiUrl);
 
 // Graphql request maker
 const makeGraphQLRequest = async (query: string, variables = {}) => {
-  try {
-    return client.request(query, variables);
-  } catch (error) {
-    throw error;
-  }
+  return await client.request(query, variables);
 };
 
 // Make getUser action

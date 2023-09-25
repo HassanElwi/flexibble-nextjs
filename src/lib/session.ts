@@ -90,7 +90,7 @@ export const authOptions: NextAuthOptions = {
         }
 
         return true;
-      } catch (error: any) {
+      } catch (error: unknown) {
         console.log("Error in sing in callback", error);
         return false;
       }
